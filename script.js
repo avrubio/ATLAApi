@@ -1,19 +1,17 @@
 (() => {
-  let btn = document.querySelector("button");
+  let btn = document.querySelector(".button-85");
   btn.addEventListener("click", getRandomCharacter);
+  let data;
+  let characters;
 
   async function getRandomCharacter() {
     let characterName = document.querySelector(".characterName");
     let image = document.querySelector("#image");
 
-    let data = await axios(
-      "https://last-airbender-api.fly.dev/api/v1/characters"
-    );
+    data = await axios("https://last-airbender-api.fly.dev/api/v1/characters");
 
-    const characters = data.data;
-    // console.log(responseFromApi);
+    characters = data.data;
 
-    // console.log(btn, image, characterName);
     console.log(characters);
 
     const randomIndex = Math.floor(Math.random() * characters.length);
@@ -22,4 +20,12 @@
     image.src = randomCharacter.photoUrl;
     characterName.textContent = randomCharacter.name;
   }
+
+  let btnAllies = document.querySelector(".button-allies-keyframe");
+
+  btnAllies.addEventListener("click", getAllies);
+  function getAllies(characters) {
+    console.log(data);
+  }
+  let btnEnemies = document.querySelector(".button-enemies-keyframe");
 })();
