@@ -14,28 +14,14 @@
 * {
   margin: 0 auto;
   padding: 0 auto;
-
   font-family: AvatarFont;
 }
 
 html,
 body {
   text-align: center;
-  background-image: linear-gradient(
-    to right top,
-    #80d0ee,
-    #00dfeb,
-    #00eac5,
-    #47ef81,
-    #a8eb12
-  );
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+  background-color: #54c5bc;
+  margin-bottom: 10px;
 }
 
 /* BUTTON STYLING */
@@ -69,7 +55,7 @@ body {
     #ff0000
   );
   position: absolute;
-  top: -2px;
+  top: -5px;
   left: -2px;
   background-size: 400%;
   z-index: -1;
@@ -106,38 +92,6 @@ body {
   border-radius: 10px;
 }
 
-.button-allies-keyframe {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-allies-keyframe:before {
-  content: "";
-  background: linear-gradient(45deg, #028a19, #48ff00, #00ffd5);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: button-allies-keyframe 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
 @keyframes button-allies-keyframe {
   0% {
     background-position: 0 0;
@@ -150,78 +104,6 @@ body {
   }
 }
 
-.button-allies-keyframe:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-.button-enemies-keyframe {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-enemies-keyframe:before {
-  content: "";
-  background: linear-gradient(45deg, #fa0000, #f14c4c, #7f051b);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: button-enemies-keyframe 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-@keyframes button-enemies-keyframe {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.button-enemies-keyframe:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-#enemies-btn {
-  margin-left: 30px;
-}
-
 h2 {
   margin-top: 20px;
   font-size: 40px;
@@ -229,13 +111,13 @@ h2 {
 
 p {
   font-size: 30px;
+  margin-bottom: 0px;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -250,7 +132,6 @@ p {
   width: 30%;
   height: 30%;
   margin-left: 10px;
-  margin-top: 30px;
 }
 
 #image {
@@ -260,33 +141,43 @@ p {
   border-radius: 5px;
 }
 
-/* Adjust button styles as needed */
-#allies-btn,
-#enemies-btn {
-  padding: 10px 30px;
-  font-family: "Courier New", Courier, monospace;
-  top: -200px;
+.searchBar {
+  justify-content: center;
 }
 
-/* Default styles */
-#enemies-btn {
-  /* position: static; */
-  /* left: -200%; Example percentage for initial position */
-  /* z-index: 4; */
-  left: 3%;
-  /* align-items: center; */
+.randomBtn,
+.btn {
+  font-family: AvatarFont;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow, transform;
+  background: radial-gradient(100% 100% at 100% 0%, #89e5ff 0%, #54c5bc 100%);
+  box-shadow: 0px 2px 4px rgb(45 35 66 / 40%),
+    0px 7px 13px -3px rgb(45 35 66 / 30%),
+    inset 0px -3px 0px rgb(58 65 111 / 50%);
+  padding: 0 32px;
+  border-radius: 6px;
+  color: #fff;
+  height: 48px;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
-
-#allies-btn {
-  /* position: static; */
-  /* right: -200%; */
+.randomBtn:hover,
+.btn:hover {
+  box-shadow: 0px 4px 8px rgb(45 35 66 / 40%),
+    0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #262749;
+  transform: translateY(-2px);
 }
-
-/* Media query for smaller screens */
-@media screen and (max-width: 1000px) {
-  #enemies-btn,
-  #allies-btn {
-    position: static; /* Resets position for smaller screens */
-    margin-top: 10px; /* Example: Adds space between buttons and image */
-  }
+.randomBtn:active,
+.btn:active {
+  box-shadow: inset 0px 3px 7px #3c4fe0;
+  transform: translateY(2px);
+}
+input {
+  width: 100px;
+  height: 45px;
+  border-radius: 5px;
 }

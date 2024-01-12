@@ -1,0 +1,17 @@
+.outer {
+  background-image: url("images/gameboy-icon-17233.png");
+  background-repeat: no-repeat;
+  /* width: 600px; */
+  background-position: center;
+  height: 600px;
+  /* zoom: 250%; */
+}
+.inner {
+  position: relative;
+  background-color: ;
+  left: -1px;
+  top: 160px;
+  width: 370px;
+  height: 250px;
+  border-radius: 14px;
+}
