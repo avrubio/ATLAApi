@@ -12,7 +12,7 @@ The purpose of this project is to showcase the skills I learned in my CanCode Co
 - Structuring my project
 
 ## Live Demo
-You can check out my project here: (Live Demo)[https://atla.avrubio.dev/]
+You can check out my project here: [Live Demo](https://atla.avrubio.dev/)
 
 ## Features and Basics
 Features for this project include:
