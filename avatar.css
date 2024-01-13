@@ -44,6 +44,7 @@ body {
 .aang:hover {
   --aang-arrow: var(--avatar-arrow);
   --aang-eye: var(--avatar-arrow);
+  cursor: pointer;
 }
 
 .head {
